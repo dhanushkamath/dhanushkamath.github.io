@@ -95,6 +95,7 @@ body.active {
     }
 }
 
+
 @keyframes pulsate {
     0% {
         transform: scale(1, 1)
@@ -102,6 +103,20 @@ body.active {
 
     50% {
         transform: scale(1.5, 1.5)
+    }
+
+    100% {
+        transform: scale(1, 1)
+    }
+}
+
+@keyframes pulsate-small {
+    0% {
+        transform: scale(1, 1)
+    }
+
+    50% {
+        transform: scale(1.2, 1.2)
     }
 
     100% {
@@ -246,17 +261,21 @@ footer {
 .social li {
     display: inline-block;
     font-size: 1.25em;
-    list-style: none
+    list-style: none;
+    color: #3498db;
 }
 
 .social a {
     display: block;
-    color: #74808a;
-    padding: 10px
+    color: #3498db;
+    padding: 10px;
+
 }
 
 .social a:hover {
-    color: #3498db
+    color: #13547a;
+    animation: pulsate-small 1s ease 1;
+    text-decoration: none
 }
 
 .btn-rounded-white {
@@ -600,6 +619,16 @@ footer {
     font-size: 0.9em
 }
 
+.project-info a {
+    color: #3498db;
+    padding: 10px;
+}
+
+.project-info a:hover {
+    color: #13547a;
+    text-decoration: none
+}
+
 .no-image .project-info {
     position: relative;
     margin: 5;
@@ -886,7 +915,6 @@ footer {
 
     .social {
         text-align: center;
-        animation: pulsate 5s ease;
     }
 }
 
